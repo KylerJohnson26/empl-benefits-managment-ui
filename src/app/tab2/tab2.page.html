@@ -1,9 +1,19 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab Two
+      Employee List
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let empl of employees">
+      <ion-label>
+        <h2>{{empl.firstName}} {{empl.lastName}}</h2>
+        <h3>{{empl.jobTitle}}</h3>
+        <p>{{empl.employeeIdNum}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
